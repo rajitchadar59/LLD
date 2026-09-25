@@ -422,48 +422,7 @@ How should objects communicate?
 
 ---
 
-# Complete Design Pattern Flowchart
 
-```text
-                         DESIGN PATTERNS
-                                |
-             ┌──────────────────┼──────────────────┐
-             ↓                  ↓                  ↓
-        CREATIONAL          STRUCTURAL         BEHAVIORAL
-             |                  |                  |
-             ↓                  ↓                  ↓
-       Object Creation     Object Structure   Object Behavior
-             |                  |                  |
-     ┌───────┼───────┐    ┌─────┼─────┐     ┌────┼──────────────┐
-     ↓       ↓       ↓    ↓     ↓     ↓     ↓    ↓              ↓
- Singleton Factory Builder Adapter Decorator Facade Observer   Strategy
-     |       |                         |         |              |
-     ↓       ↓                         ↓         ↓              ↓
- Abstract Prototype                  Proxy     State          Command
- Factory                                      |
-                                              ↓
-                                    Chain of Responsibility
-                                              |
-                                              ↓
-                                       Template Method
-                                              |
-                                              ↓
-                                           Iterator
-                                              |
-                                              ↓
-                                           Mediator
-                                              |
-                                              ↓
-                                           Memento
-                                              |
-                                              ↓
-                                           Visitor
-                                              |
-                                              ↓
-                                         Interpreter
-```
-
----
 
 # Quick Revision
 
