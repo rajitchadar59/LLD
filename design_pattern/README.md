@@ -126,31 +126,36 @@ How should objects/classes be connected?
 ## Types
 
 ```text
-                    STRUCTURAL
-                         |
-        ┌────────────────┼──────────────────┐
-        ↓                ↓                  ↓
-      Adapter         Decorator           Facade
-        |                |                  |
-        ↓                ↓                  ↓
-    Connect          Add Behavior       Simplify
-  Different          Dynamically        Complex System
-  Interfaces
-        |
-        ├───────────────┬──────────────────┐
-        ↓               ↓                  ↓
-      Proxy          Composite           Bridge
-        |               |                  |
-        ↓               ↓                  ↓
- Control Access     Tree Structure   Separate Abstraction
-                                     from Implementation
-
-                         |
-                         ↓
-                     Flyweight
-                         |
-                         ↓
-                   Share Objects
+                         STRUCTURAL DESIGN PATTERNS
+                                      |
+              ┌───────────────────────┼───────────────────────┐
+              |                       |                       |
+              ↓                       ↓                       ↓
+           Adapter                Decorator                Facade
+              |                       |                       |
+              ↓                       ↓                       ↓
+     Connect incompatible      Add behavior/features    Simplify access to
+          interfaces             dynamically            a complex system
+              |                       |                       |
+              └───────────────────────┴───────────────────────┘
+                                      |
+              ┌───────────────────────┼───────────────────────┐
+              |                       |                       |
+              ↓                       ↓                       ↓
+            Proxy                 Composite                 Bridge
+              |                       |                       |
+              ↓                       ↓                       ↓
+        Control access          Represent objects      Separate abstraction
+        to another object       as a tree structure     from implementation
+              |                       |                       |
+              └───────────────────────┴───────────────────────┘
+                                      |
+                                      ↓
+                                  Flyweight
+                                      |
+                                      ↓
+                             Share common objects
+                              to reduce memory use
 ```
 
 ## Important Structural Patterns
@@ -261,40 +266,49 @@ How should objects communicate?
 ## Types
 
 ```text
-                     BEHAVIORAL
-                          |
-       ┌──────────────────┼───────────────────┐
-       ↓                  ↓                   ↓
-    Observer           Strategy            Command
-       |                  |                   |
-       ↓                  ↓                   ↓
-  Notify Objects     Change Algorithm     Encapsulate
-                                          Request
-       |
-       ├──────────────────┬──────────────────┐
-       ↓                  ↓                  ↓
-     State          Chain of Responsibility  Iterator
-       |                  |                  |
-       ↓                  ↓                  ↓
- Change Behavior      Pass Request       Traverse
- Based on State       Through Chain      Collection
-
-                          |
-             ┌────────────┼────────────┐
-             ↓            ↓            ↓
-       Template Method  Mediator     Memento
-             |            |            |
-             ↓            ↓            ↓
-       Define Algorithm  Central     Save/Restore
-                         Communication   State
-
-                          |
-                    ┌─────┴─────┐
-                    ↓           ↓
-                 Visitor    Interpreter
-                    |           |
-                    ↓           ↓
-              Add Operations  Interpret
+                           BEHAVIORAL DESIGN PATTERNS
+                                      |
+              ┌───────────────────────┼───────────────────────┐
+              |                       |                       |
+              ↓                       ↓                       ↓
+           Observer                Strategy                Command
+              |                       |                       |
+              ↓                       ↓                       ↓
+        Notify dependent        Change algorithm        Encapsulate a
+           objects              at runtime              request as object
+              |                       |                       |
+              └───────────────────────┴───────────────────────┘
+                                      |
+              ┌───────────────────────┼───────────────────────┐
+              |                       |                       |
+              ↓                       ↓                       ↓
+            State          Chain of Responsibility         Iterator
+              |                       |                       |
+              ↓                       ↓                       ↓
+       Change behavior          Pass request through      Traverse a
+       based on state              a chain                collection
+              |                       |                       |
+              └───────────────────────┴───────────────────────┘
+                                      |
+              ┌───────────────────────┼───────────────────────┐
+              |                       |                       |
+              ↓                       ↓                       ↓
+       Template Method            Mediator                 Memento
+              |                       |                       |
+              ↓                       ↓                       ↓
+       Define algorithm          Centralize object       Save and restore
+       skeleton                  communication              state
+              |                       |                       |
+              └───────────────────────┴───────────────────────┘
+                                      |
+                              ┌───────┴───────┐
+                              |               |
+                              ↓               ↓
+                           Visitor       Interpreter
+                              |               |
+                              ↓               ↓
+                       Add operations     Interpret a
+                       to objects         language/grammar
 ```
 
 ## Important Behavioral Patterns
